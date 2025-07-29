@@ -1,0 +1,789 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #3939d9f2;
+}
+
+.container {
+  padding: 0 100px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.page {
+  margin-left: 120px;
+  background: #e5e5e5;
+  padding: 40px;
+  height: 100vh;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+@media (max-width: 1208px) {
+  .page {
+    margin-left: 0;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 485px) {
+  .page {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .logo {
+    width: auto;
+  }
+}
+
+.logo-img {
+  width: 350px;
+}
+
+.form-title {
+  font-size: 1.75rem;
+  color: #111;
+  margin-bottom: 30px;
+}
+
+.form-component {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  min-height: 100vh;
+  background: #e5e5e5;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-component h2 {
+  color: gray;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.form-component h4 {
+  color: gray;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form-component p {
+  max-width: 750px;
+  color: gray;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-component form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 550px;
+}
+
+.add-admin-form form {
+  width: 100%;
+}
+
+.form-component p:first-child {
+  font-size: 28px;
+  font-weight: 700;
+  color: #370080a3;
+  margin-top: 30px;
+}
+
+.form-component form div {
+  display: flex;
+  gap: 30px;
+}
+
+.form-component form input,
+.form-component form select,
+.form-component form textarea {
+  flex: 1;
+  font-size: 24px;
+  padding: 10px 10px 10px 40px;
+  border-radius: 7px;
+  border: 1px solid gray;
+}
+
+.form-component button {
+  padding: 10px 35px;
+  color: #fff;
+  font-weight: 700;
+  width: fit-content;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  background: linear-gradient(140deg, #9083d5, #271776ca);
+}
+
+.form-component .wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.form-component .wrapper .banner {
+  flex: 1;
+}
+
+.form-component .wrapper .banner:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-component .wrapper .banner:last-child img {
+  max-width: 450px;
+}
+
+@media (max-width: 888px) {
+  .form-component {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .form-component form div {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 667px) {
+
+  .form-component form input,
+  .form-component form select,
+  .form-component form textarea {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-component form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 485px) {
+  .add-admin-form {
+    padding: 30px 0;
+  }
+}
+
+/* Dashboard container - full viewport height, vertical layout */
+.dashboard.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background: #f5f7fb;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  overflow: hidden;
+  /* prevent overall page scroll */
+}
+
+/* First banner with admin info */
+.dashboard .banner:first-child {
+  height: 35vh;
+  display: flex;
+  gap: 20px;
+}
+
+/* First box inside first banner */
+.dashboard .banner .firstbox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #b5b5ff, #d5d5ff);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard .banner .firstbox img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard .banner .firstbox .content {
+  flex: 1;
+}
+
+.dashboard .banner .firstbox .content div {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  gap: 8px;
+  color: #222;
+}
+
+.dashboard .banner .firstbox .content div h5 {
+  color: #ff008d;
+  font-weight: 700;
+}
+
+.dashboard .banner .firstbox .content p {
+  font-size: 25px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Container for box-row (holds secondbox and thirdbox) */
+.dashboard .box-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* Common box styling for secondbox and thirdbox children */
+.dashboard .secondbox>div,
+.dashboard .thirdbox>div {
+  flex: 1;
+  min-width: 220px;
+  background: #3939d9f2;
+  padding: 24px;
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-style: normal;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Headings and Text */
+.dashboard .secondbox p,
+.dashboard .thirdbox p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #dbeafe;
+}
+
+.dashboard .secondbox h3,
+.dashboard .thirdbox h3 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* Icons style if used */
+.dashboard .secondbox i,
+.dashboard .thirdbox i {
+  font-size: 32px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Thirdbox layout update */
+.dashboard .thirdbox {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: transparent;
+  box-shadow: none;
+  margin-top: 20px;
+  overflow: hidden;
+  /* important for scrollable child */
+}
+
+/* Appointment Banner specifically */
+.appointments-banner {
+  /* Set height for your banner */
+  height: 65vh;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.appointments-banner {
+  height: 65vh;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 100%;
+  /* ensures it's scrollable within banner */
+  position: relative;
+}
+
+/* Hide scrollbars */
+.table-wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.table-wrapper {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 18px;
+}
+
+.table-wrapper thead th {
+  position: sticky;
+  top: 0;
+  background: #1e3a8a;
+  color: white;
+  padding: 12px 16px;
+  z-index: 2;
+  border-bottom: 2px solid #e5e7eb;
+  text-align: left;
+}
+
+.table-wrapper tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+/* Remove border-radius from table for sticky to work right */
+.appointments-banner table {
+  color: #3939d9f2;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+
+.appointments-banner th,
+.appointments-banner td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.appointments-banner tbody tr:hover {
+  background-color: #f1f5f9;
+  transition: background 0.2s;
+}
+
+/* Select dropdown inside the table */
+.appointments-banner select {
+  font-size: 20px;
+  border: none;
+  width: 100%;
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+}
+
+.appointments-banner select:focus {
+  outline: none;
+}
+
+/* Status colors */
+.value-pending {
+  color: #eab308;
+}
+
+.value-accepted {
+  color: #16a34a;
+}
+
+.value-rejected {
+  color: #dc2626;
+}
+
+/* Icons in table cells */
+.appointments-banner td svg {
+  display: flex;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.appointments-banner td .green {
+  color: #16a34a;
+}
+
+.appointments-banner td .red {
+  color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard .box-row {
+    flex-direction: column;
+  }
+
+  .dashboard .secondbox>div,
+  .dashboard .thirdbox>div {
+    width: 100%;
+  }
+
+  .appointments-banner table {
+    font-size: 14px;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  width: 120px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  align-items: center;
+  color: #fff;
+  padding: 70px 0;
+
+  z-index: 9999;
+  /* very high value to be on top */
+}
+
+
+.sidebar svg {
+  width: 50px;
+  height: 50px;
+  font-size: 34px;
+}
+
+.sidebar svg:hover {
+  background: #fff;
+  color: #3939d9f2;
+  border-radius: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sidebar .links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.wrapper {
+  display: none;
+}
+
+.wrapper .hamburger {
+  display: none;
+}
+
+@media (max-width: 1208px) {
+  .sidebar {
+    background: #3939d9f2;
+    left: -100%;
+    transition: left 0.3s ease;
+    z-index: 9999;
+    /* keep it on top */
+  }
+
+  .show {
+    left: 0;
+    transition: left 0.3s ease;
+    z-index: 9999;
+    /* ensure it stays on top */
+  }
+
+  .wrapper {
+    display: block;
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    font-size: 34px;
+    background: #3939d9f2;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10000;
+    /* even higher so hamburger is always clickable */
+  }
+
+  .wrapper .hamburger {
+    display: block;
+  }
+}
+
+
+@media (max-width: 485px) {
+  .wrapper {
+    left: 20px;
+  }
+
+  .show {
+    width: 80px;
+  }
+}
+
+.doctors h1 {
+  color: #3939d9f2;
+  margin-bottom: 30px;
+  font-size: 2.3rem;
+}
+
+.doctors .banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-gap: 20px;
+}
+
+.doctors .banner .card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctors .banner .card img {
+  width: 270px;
+  height: 270px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
+
+.doctors .banner .card h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.doctors .banner .card div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.doctors .banner .card div p {
+  font-weight: 700;
+}
+
+.doctors .banner .card div p span {
+  font-weight: 500;
+}
+
+@media (max-width: 350px) {
+  .doctors .banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    grid-gap: 20px;
+  }
+}
+
+.messages h1 {
+  color: #3939d9f2;
+  margin-bottom: 30px;
+  font-size: 2.3rem;
+}
+
+.messages .banner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.messages .banner .card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.messages .banner .card div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.messages .banner .card div p {
+  font-weight: 700;
+}
+
+.messages .banner .card div p span {
+  font-weight: 500;
+}
+
+.add-doctor-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 0;
+}
+
+.add-doctor-form form {
+  width: 100%;
+}
+
+.add-doctor-form form .first-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.add-doctor-form form .first-wrapper div:first-child {
+  flex: 1;
+  display: flex;
+  /* 💡 Add this */
+  flex-direction: column;
+  align-items: center;
+  /* 💡 Center horizontally */
+  justify-content: center;
+  /* 💡 Center vertically */
+}
+
+.add-doctor-form form .first-wrapper div:first-child img {
+  width: 50%;
+  height: auto;
+  /* 💡 Maintain aspect ratio */
+  margin-bottom: 20px;
+  object-fit: cover;
+  /* Optional: if image looks stretched */
+}
+
+.add-doctor-form form .first-wrapper div:first-child input {
+  width: 80%;
+  /* Increased for better UI */
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.add-doctor-form form .first-wrapper div:first-child input[type="file"]::file-selector-button {
+  width: 100%;
+  /* Adjust as needed */
+  padding: 8px;
+}
+
+.add-doctor-form form .first-wrapper div:last-child {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-doctor-form form input,
+.add-doctor-form form select,
+.add-doctor-form form textarea {
+  flex: 1;
+  font-size: 24px;
+  padding: 10px 10px 10px 40px;
+  border-radius: 7px;
+  border: 1px solid gray;
+}
+
+.add-doctor-form button {
+  padding: 10px 35px;
+  color: #fff;
+  font-weight: 700;
+  width: fit-content;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  background: linear-gradient(140deg, #9083d5, #271776ca);
+}
+
+@media (max-width: 945px) {
+  .add-doctor-form form .first-wrapper {
+    flex-direction: column;
+  }
+
+  .add-doctor-form form .first-wrapper div:first-child img {
+    height: auto;
+  }
+}
+
+input[type="date"]::backdrop {
+  content: attr(placeholder);
+  color: #444;
+  margin-right: 0.5em;
+}
+
+input[type="time"]:before {
+  content: attr(placeholder);
+  color: #444;
+  margin-right: 0.5em;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.dashboard {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.banner {
+  flex: 1;
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner table {
+  width: 100%;
+  table-layout: auto;
+  word-wrap: break-word;
+  overflow: hidden;
+}
